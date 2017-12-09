@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,13 @@ using Trello.Feature.Models;
 
 namespace Trello.Feature.Contexts
 {
-    public class FeatureContext
+    public class TrelloContext
     {
+        public IWebDriver WebDriver { get; set; }
+
         public SessionModel SessionModel { get; private set; }
 
-        public FeatureContext()
+        public TrelloContext()
         {
             SessionModel = new SessionModel();
         }

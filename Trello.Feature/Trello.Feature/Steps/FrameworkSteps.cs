@@ -1,31 +1,35 @@
-﻿using System;
+﻿using Common.Selenium.Logic;
+using Common.Selenium.Logic.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using Trello.Feature.Contexts;
 
 namespace Trello.Feature.Steps
 {
     [Binding]
     public class FrameworkSteps
     {
-        private FeatureContext _context;
+        private TrelloContext _context;
 
-        public FrameworkSteps(FeatureContext featureContext)
+        public FrameworkSteps(TrelloContext context)
         {
-            _context = featureContext;
+            _context = context;
         }
 
         [Given(@"I open Google Chrome")]
         public void GivenIOpenGoogleChrome()
         {
-            ScenarioContext.Current.Pending();
+            _context.WebDriver = Driver.GetDriverByType(WebDriverType.Chrome);;
         }
 
         [Given(@"I navigate to ""(.*)""")]
         public void GivenINavigateTo(string p0)
         {
+            _context.WebDriver.Navigate().GoToUrl(p0);
             ScenarioContext.Current.Pending();
         }
 

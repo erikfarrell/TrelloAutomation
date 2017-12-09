@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using Trello.Feature.Contexts;
 
 namespace Trello.Feature.Steps
 {
     [Binding]
     public class TopBarNavigationSteps
     {
-        private FeatureContext _context;
+        private TrelloContext _context;
 
-        public TopBarNavigationSteps(FeatureContext featureContext)
+        public TopBarNavigationSteps(TrelloContext context)
         {
-            _context = featureContext;
+            _context = context;
         }
 
         [Given(@"I open the Boards menu from top menu navigation")]

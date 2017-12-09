@@ -1,0 +1,2 @@
+﻿This project is designed to test Trello through Selenium.
+It uses Specflow to describe acceptance criteria.

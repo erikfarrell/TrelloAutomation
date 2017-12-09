@@ -1,0 +1,2 @@
+﻿This project is to separate web automation models from our core Feature. If we want to use this with multiple interfaces, we can reference this.
+Having models in its own project ensures that I am creating lightweight POCOs that can be passed to anything without fear of circular reference.

@@ -1,0 +1,1 @@
+﻿This project is in the Common namespace, only highly reusable logic should be placed here.
