@@ -1,0 +1,1 @@
+﻿#error (19:1): expected: #EOF, #TableRow, #DocStringSeparator, #StepLine, #TagLine, #ScenarioLine, #ScenarioOutlineLine, #Comment, #Empty, got 'Scenario : Permanently delete a board in Chrome'

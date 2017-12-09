@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trello.Feature", "Trello.Feature\Trello.Feature.csproj", "{582DE019-9842-4630-A707-767FC9C7CA38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logic", "Common.Logic\Common.Logic.csproj", "{18483A35-25A8-4182-AFC6-74251F6B1B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Selenium.Logic", "Common.Selenium.Logic\Common.Selenium.Logic.csproj", "{EE573291-65A5-4568-8778-E3B0FBCF45F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trello.WebAutomation.Logic", "Trello.WebAutomation.Logic\Trello.WebAutomation.Logic.csproj", "{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trello.WebAutomation.Models", "Trello.WebAutomation.Models\Trello.WebAutomation.Models.csproj", "{9E059F26-30AA-491B-AEA8-6608CB68327A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{582DE019-9842-4630-A707-767FC9C7CA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{582DE019-9842-4630-A707-767FC9C7CA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{582DE019-9842-4630-A707-767FC9C7CA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18483A35-25A8-4182-AFC6-74251F6B1B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18483A35-25A8-4182-AFC6-74251F6B1B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18483A35-25A8-4182-AFC6-74251F6B1B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18483A35-25A8-4182-AFC6-74251F6B1B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE573291-65A5-4568-8778-E3B0FBCF45F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE573291-65A5-4568-8778-E3B0FBCF45F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE573291-65A5-4568-8778-E3B0FBCF45F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE573291-65A5-4568-8778-E3B0FBCF45F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
