@@ -25,7 +25,7 @@ namespace Trello.Feature.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Explorer")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Firefox")]
         public string WebDriver {
             get {
                 return ((string)(this["WebDriver"]));
