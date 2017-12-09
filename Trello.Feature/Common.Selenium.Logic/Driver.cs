@@ -13,6 +13,11 @@ namespace Common.Selenium.Logic
 {
     public static class Driver
     {
+        public static IWebDriver GetDriverByType(string webDriverType)
+        {
+            return GetDriverByType((WebDriverType)Enum.Parse(typeof(WebDriverType), webDriverType));
+        }
+
         public static IWebDriver GetDriverByType(WebDriverType webDriverType)
         {
             switch (webDriverType)

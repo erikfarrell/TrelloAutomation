@@ -4,9 +4,8 @@
 	I want to use Trello as an automation example platform
 
 @mytag
-Scenario: Create a new board in Chrome
-	Given I open Google Chrome
-	And I navigate to "https://trello.com"
+Scenario: Create a new board
+	Given I navigate to "https://trello.com"
 	And I log in as "survias@live.com"
 	And I open the Boards menu from top menu navigation
 	And I click "Create new board..." in the Boards menu
@@ -18,9 +17,8 @@ Scenario: Create a new board in Chrome
 	And I open the Boards menu from top menu navigation
 	Then the board should appear
 
-Scenario: Permanently delete a board in Chrome
-	Given I open Google Chrome
-	And I navigate to "https://trello.com"
+Scenario: Permanently delete a board
+	Given I navigate to "https://trello.com"
 	And I log in as "survias@live.com"
 	And I open the Boards menu from top menu navigation
 	And I open the "Blue Board" board from the Boards menu

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Common.Selenium.Logic;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Trello.Feature.Contexts
         public TrelloContext()
         {
             SessionModel = new SessionModel();
+            WebDriver = Driver.GetDriverByType(Properties.Settings.Default.WebDriver);
         }
     }
 }

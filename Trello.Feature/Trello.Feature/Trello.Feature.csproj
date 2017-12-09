@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Trello.feature</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Steps\BoardSteps.cs" />
     <Compile Include="Steps\TopBarNavigationSteps.cs" />
     <Compile Include="Steps\FrameworkSteps.cs" />
@@ -96,6 +101,10 @@
     <None Include="Features\Trello.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Trello.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

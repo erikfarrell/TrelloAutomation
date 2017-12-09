@@ -72,25 +72,23 @@ namespace Trello.Feature.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Create a new board in Chrome")]
+        [Xunit.FactAttribute(DisplayName="Create a new board")]
         [Xunit.TraitAttribute("FeatureTitle", "Trello")]
-        [Xunit.TraitAttribute("Description", "Create a new board in Chrome")]
+        [Xunit.TraitAttribute("Description", "Create a new board")]
         [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void CreateANewBoardInChrome()
+        public virtual void CreateANewBoard()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a new board in Chrome", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a new board", new string[] {
                         "mytag"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I open Google Chrome", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to \"https://trello.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And("I navigate to \"https://trello.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
  testRunner.And("I log in as \"survias@live.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
+#line 10
  testRunner.And("I open the Boards menu from top menu navigation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 11
  testRunner.And("I click \"Create new board...\" in the Boards menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -105,49 +103,47 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "Color",
                         "Blue"});
-#line 13
+#line 12
  testRunner.When("I create a new board with the following values", ((string)(null)), table1, "When ");
-#line 18
+#line 17
  testRunner.And("I open the Boards menu from top menu navigation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 18
  testRunner.Then("the board should appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Permanently delete a board in Chrome")]
+        [Xunit.FactAttribute(DisplayName="Permanently delete a board")]
         [Xunit.TraitAttribute("FeatureTitle", "Trello")]
-        [Xunit.TraitAttribute("Description", "Permanently delete a board in Chrome")]
-        public virtual void PermanentlyDeleteABoardInChrome()
+        [Xunit.TraitAttribute("Description", "Permanently delete a board")]
+        public virtual void PermanentlyDeleteABoard()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Permanently delete a board in Chrome", ((string[])(null)));
-#line 21
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Permanently delete a board", ((string[])(null)));
+#line 20
 this.ScenarioSetup(scenarioInfo);
+#line 21
+ testRunner.Given("I navigate to \"https://trello.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.Given("I open Google Chrome", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 23
- testRunner.And("I navigate to \"https://trello.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
  testRunner.And("I log in as \"survias@live.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
+#line 23
  testRunner.And("I open the Boards menu from top menu navigation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
+#line 24
  testRunner.And("I open the \"Blue Board\" board from the Boards menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 25
  testRunner.And("I open the board side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 26
  testRunner.And("I click on \"More\" in the board side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 27
  testRunner.When("I click on \"Close Board...\" in the board side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 28
  testRunner.And("I click \"Close\" in the confirmation box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 29
  testRunner.And("I click \"Permanently Delete Board...\" in the main panel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 30
  testRunner.And("I click \"Delete\" in the confirmation box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 31
  testRunner.And("I open the Boards menu from top menu navigation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
+#line 32
  testRunner.Then("the board should not appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

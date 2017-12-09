@@ -20,12 +20,6 @@ namespace Trello.Feature.Steps
             _context = context;
         }
 
-        [Given(@"I open Google Chrome")]
-        public void GivenIOpenGoogleChrome()
-        {
-            _context.WebDriver = Driver.GetDriverByType(WebDriverType.Chrome);;
-        }
-
         [Given(@"I navigate to ""(.*)""")]
         public void GivenINavigateTo(string p0)
         {
