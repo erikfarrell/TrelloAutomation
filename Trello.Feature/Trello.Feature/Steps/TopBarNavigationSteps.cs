@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Trello.Feature.Contexts;
+using WebAutomation.Logic.Trello.Board;
 using Xunit.Abstractions;
 
 namespace Trello.Feature.Steps
@@ -19,16 +20,13 @@ namespace Trello.Feature.Steps
             _context = context;
         }
 
-        [Given(@"I open the Boards menu from top menu navigation")]
-        public void GivenIOpenTheBoardsMenuFromTopMenuNavigation()
+        [Given(@"I click ""(.*)"" from Top Menu => Boards")]
+        public void GivenIClickFromTopMenuBoards(string p0)
         {
-            ScenarioContext.Current.Pending();
-        }
+            //TODO: Working here
+            BoardElement board = _context.Session.GetValueByType<BoardElement>();
 
-        [Given(@"I click ""(.*)"" in the Boards menu")]
-        public void GivenIClickInTheBoardsMenu(string p0)
-        {
-            ScenarioContext.Current.Pending();
+            board.TopBar.BoardsMenu.OpenLink(p0);
         }
 
         [Given(@"I open the ""(.*)"" board from the Boards menu")]

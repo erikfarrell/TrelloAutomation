@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Trello.Feature.Contexts;
 using WebAutomation.Logic.Trello;
+using WebAutomation.Logic.Trello.Board;
 
 namespace Trello.Feature.Steps
 {
@@ -26,10 +27,12 @@ namespace Trello.Feature.Steps
         {
             Authentication authentication = new Authentication(_context.Web);
 
-            authentication.LogIn(
+            BoardElement board = authentication.LogIn(
                 Properties.Settings.Default.TrelloUsername, 
                 Crypto.Decrypt(Properties.Settings.Default.TrelloEncryptedPassword, 
                 Constants.Keys.Passphrase));
+
+            _context.Session.SaveValueByType(board);
         }
 
         [When(@"I click ""(.*)"" in the confirmation box")]

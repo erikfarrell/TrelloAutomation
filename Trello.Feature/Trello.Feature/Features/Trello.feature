@@ -6,8 +6,7 @@
 @INPROGRESS
 Scenario: Create a new board
 	Given I log in to the test Trello instance
-	And I open the Boards menu from top menu navigation
-	And I click "Create new board..." in the Boards menu
+	And I click "Create new board…" from Top Menu => Boards
 	When I create a new board with the following values
 	| Field    | Value      |
 	| Title    | Blue Board |
