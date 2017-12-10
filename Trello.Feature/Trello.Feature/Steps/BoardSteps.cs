@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using Trello.Feature.Contexts;
+using WebAutomation.Logic.Trello.AddBoard;
+using WebAutomation.Models.Trello.AddBoard;
 
 namespace Trello.Feature.Steps
 {
@@ -33,6 +36,11 @@ namespace Trello.Feature.Steps
         [When(@"I create a new board with the following values")]
         public void WhenICreateANewBoardWithTheFollowingValues(Table table)
         {
+            AddBoardModal addBoard = _context.Session.GetValueByType<AddBoardModal>();
+
+            AddBoardModel addBoardModel = table.CreateInstance<AddBoardModel>();
+            addBoard.SetFields(addBoardModel);
+
             ScenarioContext.Current.Pending();
         }
 

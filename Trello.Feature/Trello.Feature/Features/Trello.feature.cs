@@ -85,7 +85,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.Given("I log in to the test Trello instance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And("I click \"Create new board…\" from Top Menu => Boards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click Create New Board... from Top Menu => Boards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Field",

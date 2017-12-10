@@ -53,8 +53,10 @@
   <ItemGroup>
     <Compile Include="Base\IWebAutomationBase.cs" />
     <Compile Include="Base\IWebAutomationElement.cs" />
+    <Compile Include="Base\IWebAutomationModal.cs" />
     <Compile Include="Base\IWebAutomationPage.cs" />
     <Compile Include="Constants\Sites.cs" />
+    <Compile Include="Trello\AddBoard\AddBoardModal.cs" />
     <Compile Include="Trello\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trello\Board\BoardPage.cs" />
