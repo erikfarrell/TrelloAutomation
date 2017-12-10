@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebAutomation.Logic.Base;
+using WebAutomation.Logic.Trello.Board;
 using WebAutomation.Models;
 using WebAutomation.Models.Trello.AddBoard;
 
@@ -24,14 +25,18 @@ namespace WebAutomation.Logic.Trello.AddBoard
             Web.Driver.FindElement(AddBoardScreenReference.SecurityDropdown).Click();
             IWebElement securityOptionDropdown = Web.Driver.FindClickableElement(AddBoardScreenReference.SecurityOption(addBoardModel.Security), Web.UniversalTimeout);
             securityOptionDropdown.Click();
+            //TODO: Fix this - has a chance to fail and not select color right now
             Web.Driver.WaitForStaleElement(securityOptionDropdown, Web.UniversalTimeout);
             if (!String.IsNullOrWhiteSpace(addBoardModel.Color))
-                Web.Driver.FindElement(AddBoardScreenReference.BoardColorButton(addBoardModel.Color)).Click();
+                Web.Driver.FindClickableElement(AddBoardScreenReference.BoardColorButton(addBoardModel.Color), Web.UniversalTimeout).Click();
         }
 
-        public void CreateBoard()
+        public BoardPage CreateBoard()
         {
-            Web.Driver.FindElement(By.XPath("//span[text()='Create Board']/parent::button")).Click();
+            Web.Driver.FindElement(AddBoardScreenReference.CreateBoardButton).Click();
+            Web.Driver.WaitForInvisibleElement(AddBoardScreenReference.WindowOverlay, Web.UniversalTimeout);
+
+            return new BoardPage(Web);
         }
     }
 }

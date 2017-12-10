@@ -11,11 +11,15 @@ namespace Trello.Feature.Models
     {
         public ITestOutputHelper Output { get; private set; }
         private List<SessionObjectModel> SessionObjects { get; set; }
+        
+        public SessionModel()
+        {
+            SessionObjects = new List<SessionObjectModel>();
+        }
 
-        public SessionModel(ITestOutputHelper output)
+        public SessionModel(ITestOutputHelper output) : this()
         {
             Output = output;
-            SessionObjects = new List<SessionObjectModel>();
         }
 
         public T GetValueByType<T>()

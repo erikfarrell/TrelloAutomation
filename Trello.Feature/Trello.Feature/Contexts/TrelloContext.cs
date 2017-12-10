@@ -21,15 +21,20 @@ namespace Trello.Feature.Contexts
 
         public SessionModel Session { get; private set; }
 
-        public TrelloContext(ITestOutputHelper output)
+        public TrelloContext()
         {
-            IWebDriver driver = 
-                Driver.GetDriver(new DriverSettingsModel(Properties.Settings.Default.WebDriver, 
-                Properties.Settings.Default.IsMaximized, 
+            IWebDriver driver =
+                Driver.GetDriver(new DriverSettingsModel(Properties.Settings.Default.WebDriver,
+                Properties.Settings.Default.IsMaximized,
                 IsDisplayedOnSecondMonitor()));
-            
-            Session = new SessionModel(output);
+
+            Session = new SessionModel();
             Web = new WebModel(driver, Properties.Settings.Default.UniversalTimeout);
+        }
+
+        public TrelloContext(ITestOutputHelper output) : this()
+        {
+            Session = new SessionModel(output);
         }
 
         //HACK: Locked to development only for now
@@ -44,7 +49,7 @@ namespace Trello.Feature.Contexts
         [AfterScenario]
         public void CleanUp()
         {
-            Web.Driver.Dispose();
+            Web.Driver?.Dispose();
         }
     }
 }

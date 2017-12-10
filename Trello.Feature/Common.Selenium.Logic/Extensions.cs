@@ -56,6 +56,19 @@ namespace Common.Selenium.Logic
         }
 
         /// <summary>
+        /// Waits for an invisible element
+        /// </summary>
+        /// <param name="webDriver">The Selenium driver you're using</param>
+        /// <param name="by">Query pattern</param>
+        /// <param name="timeout">Time before failing element search</param>
+        public static void WaitForInvisibleElement(this IWebDriver webDriver, By by, TimeSpan timeout)
+        {
+            WebDriverWait wait = new WebDriverWait(webDriver, timeout);
+
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(by));
+        }
+
+        /// <summary>
         /// Waits for visible element to hit a stale reference
         /// </summary>
         /// <param name="webDriver">The Selenium driver you're using</param>

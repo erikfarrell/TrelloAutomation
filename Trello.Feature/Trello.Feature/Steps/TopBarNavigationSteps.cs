@@ -42,23 +42,5 @@ namespace Trello.Feature.Steps
         {
             ScenarioContext.Current.Pending();
         }
-
-        [When(@"I open the Boards menu from top menu navigation")]
-        public void WhenIOpenTheBoardsMenuFromTopMenuNavigation()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"the board should appear")]
-        public void ThenTheBoardShouldAppear()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"the board should not appear")]
-        public void ThenTheBoardShouldNotAppear()
-        {
-            ScenarioContext.Current.Pending();
-        }
     }
 }

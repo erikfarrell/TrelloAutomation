@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Constants\Keys.cs" />
     <Compile Include="Contexts\TrelloContext.cs" />
+    <Compile Include="Hooks\ResetTrello.cs" />
     <Compile Include="Models\SessionModel.cs" />
     <Compile Include="Models\SessionObjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +116,10 @@
     <Content Include="ProjectDescription.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Asserts.Logic\Asserts.Logic.csproj">
+      <Project>{60F9C027-C6BA-4067-9DA0-D5DA94BE88EA}</Project>
+      <Name>Asserts.Logic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common.Logic\Common.Logic.csproj">
       <Project>{18483A35-25A8-4182-AFC6-74251F6B1B42}</Project>
       <Name>Common.Logic</Name>
@@ -139,6 +144,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

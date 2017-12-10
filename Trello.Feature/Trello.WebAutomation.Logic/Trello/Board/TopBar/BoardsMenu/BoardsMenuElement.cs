@@ -26,9 +26,21 @@ namespace WebAutomation.Logic.Trello.Board.TopBar.BoardsMenu
             return new AddBoardModal(Web);
         }
 
+        public List<IWebElement> GetBoardsButtonsFromMenu()
+        {
+            Web.Driver.FindClickableElement(BoardsMenuScreenReference.BoardsButton, Web.UniversalTimeout).Click();
+            return BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtons).ToList();
+        }
+
+        public List<string> GetBoardButtonNamesFromMenu()
+        {
+            Web.Driver.FindClickableElement(BoardsMenuScreenReference.BoardsButton, Web.UniversalTimeout).Click();
+            return BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtonNames).Select(e => e.GetAttribute("title")).ToList();
+        }
+
         private IWebElement BoardsDrawer()
         {
-            return Web.Driver.FindElement(BoardsMenuScreenReference.BoardsDrawer);
+            return Web.Driver.FindVisibleElement(BoardsMenuScreenReference.BoardsDrawer, Web.UniversalTimeout);
         }
     }
 }

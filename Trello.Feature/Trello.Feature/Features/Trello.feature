@@ -12,8 +12,7 @@ Scenario: Create a new board
 	| Title    | Blue Board |
 	| Security | Private    |
 	| Color    | Blue       |
-	And I open the Boards menu from top menu navigation
-	Then the board should appear
+	Then the board should exist in the Boards menu
 
 Scenario: Permanently delete a board
 	Given I log in to the test Trello instance
@@ -25,5 +24,4 @@ Scenario: Permanently delete a board
 	And I click "Close" in the confirmation box
 	And I click "Permanently Delete Board..." in the main panel
 	And I click "Delete" in the confirmation box
-	And I open the Boards menu from top menu navigation
-	Then the board should not appear
+	Then the board should not exist in the Boards menu
