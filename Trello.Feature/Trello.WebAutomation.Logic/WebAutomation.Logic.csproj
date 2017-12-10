@@ -51,12 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\IWebAutomationBase.cs" />
+    <Compile Include="Base\IWebAutomationElement.cs" />
+    <Compile Include="Base\IWebAutomationPage.cs" />
     <Compile Include="Constants\Sites.cs" />
-    <Compile Include="Trello\Authentication.cs" />
+    <Compile Include="Trello\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Trello\Board\BoardElement.cs" />
+    <Compile Include="Trello\Board\BoardPage.cs" />
     <Compile Include="Trello\Board\TopBar\BoardsMenu\BoardsMenuElement.cs" />
     <Compile Include="Trello\Board\TopBar\TopBarElement.cs" />
+    <Compile Include="Trello\MainPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -25,9 +25,9 @@ namespace Trello.Feature.Steps
         [Given(@"I log in to the test Trello instance")]
         public void GivenILogInToTheTestTrelloInstance()
         {
-            Authentication authentication = new Authentication(_context.Web);
+            MainPage trello = new MainPage(_context.Web);
 
-            BoardElement board = authentication.LogIn(
+            BoardPage board = trello.GoToLoginPage().LogIn(
                 Properties.Settings.Default.TrelloUsername, 
                 Crypto.Decrypt(Properties.Settings.Default.TrelloEncryptedPassword, 
                 Constants.Keys.Passphrase));

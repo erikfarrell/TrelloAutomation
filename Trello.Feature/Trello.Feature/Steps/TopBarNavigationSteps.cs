@@ -24,7 +24,8 @@ namespace Trello.Feature.Steps
         public void GivenIClickFromTopMenuBoards(string p0)
         {
             //TODO: Working here
-            BoardElement board = _context.Session.GetValueByType<BoardElement>();
+            //TODO: Organize projects into folders
+            BoardPage board = _context.Session.GetValueByType<BoardPage>();
 
             board.TopBar.BoardsMenu.OpenLink(p0);
         }

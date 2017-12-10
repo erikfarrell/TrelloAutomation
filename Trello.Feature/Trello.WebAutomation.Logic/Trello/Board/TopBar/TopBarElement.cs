@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAutomation.Logic.Base;
 using WebAutomation.Logic.Trello.Board.TopBar.BoardsMenu;
 using WebAutomation.Models;
 
 namespace WebAutomation.Logic.Trello.Board.TopBar
 {
-    public class TopBarElement
+    public class TopBarElement : IWebAutomationElement
     {
-        private WebModel _web;
-        public BoardsMenuElement BoardsMenu { get; set; }
-
-        public TopBarElement(WebModel webModel)
+        public BoardsMenuElement BoardsMenu
         {
-            _web = webModel;
+            get { return new BoardsMenuElement(Web); }
+        }
 
-            BoardsMenu = new BoardsMenuElement(webModel);
+        public TopBarElement(WebModel web) : base(web)
+        {
         }
     }
 }
