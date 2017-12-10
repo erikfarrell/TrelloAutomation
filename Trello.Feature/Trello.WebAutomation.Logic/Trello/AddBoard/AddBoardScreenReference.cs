@@ -10,5 +10,8 @@ namespace WebAutomation.Logic.Trello.AddBoard
     public static class AddBoardScreenReference
     {
         public static By AddBoardTitleTextbox => By.XPath("//input[@placeholder='Add board title']");
+        public static By SecurityDropdown => By.XPath("//button[contains(@class, 'subtle-chooser-trigger')]");
+        public static By SecurityOption(string option) => By.XPath($"//ul[contains(@class, 'vis-chooser')]//span[text()='{option}']/parent::a");
+        public static By BoardColorButton(string color) => By.XPath($"//button[@title='{color.ToLower()}']");
     }
 }

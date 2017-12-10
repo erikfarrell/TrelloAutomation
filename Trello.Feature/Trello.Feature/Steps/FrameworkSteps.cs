@@ -16,6 +16,7 @@ namespace Trello.Feature.Steps
     [Binding]
     public class FrameworkSteps
     {
+        //TODO: Create a hook to wipe all boards prior to tests
         private TrelloContext _context;
 
         public FrameworkSteps(TrelloContext context)

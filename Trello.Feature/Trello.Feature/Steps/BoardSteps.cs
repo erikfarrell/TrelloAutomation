@@ -40,8 +40,7 @@ namespace Trello.Feature.Steps
 
             AddBoardModel addBoardModel = table.CreateInstance<AddBoardModel>();
             addBoard.SetFields(addBoardModel);
-
-            ScenarioContext.Current.Pending();
+            addBoard.CreateBoard();
         }
 
         [When(@"I click on ""(.*)"" in the board side menu")]

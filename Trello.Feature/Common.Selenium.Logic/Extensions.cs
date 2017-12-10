@@ -54,5 +54,45 @@ namespace Common.Selenium.Logic
 
             wait.Until(ExpectedConditions.ElementIsVisible(by));
         }
+
+        /// <summary>
+        /// Waits for visible element to hit a stale reference
+        /// </summary>
+        /// <param name="webDriver">The Selenium driver you're using</param>
+        /// <param name="webElement">Element to go stale</param>
+        /// <param name="timeout">Time before failing element search</param>
+        public static void WaitForStaleElement(this IWebDriver webDriver, IWebElement webElement, TimeSpan timeout)
+        {
+            WebDriverWait wait = new WebDriverWait(webDriver, timeout);
+
+            wait.Until(ExpectedConditions.StalenessOf(webElement));
+        }
+
+        /// <summary>
+        /// Finds a clickable element.
+        /// </summary>
+        /// <param name="webDriver">The Selenium driver you're using</param>
+        /// <param name="by">Query pattern</param>
+        /// <param name="timeout">Time before failing element search</param>
+        /// <returns></returns>
+        public static IWebElement FindClickableElement(this IWebDriver webDriver, By by, TimeSpan timeout)
+        {
+            WaitForClickableElement(webDriver, by, timeout);
+
+            return webDriver.FindElement(by);
+        }
+
+        /// <summary>
+        /// Waits for a clickable element.
+        /// </summary>
+        /// <param name="webDriver">The Selenium driver you're using</param>
+        /// <param name="by">Query pattern</param>
+        /// <param name="timeout">Time before failing element search</param>
+        public static void WaitForClickableElement(this IWebDriver webDriver, By by, TimeSpan timeout)
+        {
+            WebDriverWait wait = new WebDriverWait(webDriver, timeout);
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(by));
+        }
     }
 }
