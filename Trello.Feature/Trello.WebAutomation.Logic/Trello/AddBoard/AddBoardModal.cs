@@ -14,12 +14,10 @@ namespace WebAutomation.Logic.Trello.AddBoard
         public AddBoardModal(WebModel web) : base(web)
         {
         }
-
-        //TODO: Add a wait before accessing modal
+        
         //TODO: Flesh out this method
         public void SetFields(AddBoardModel addBoardModel)
         {
-
         }
     }
 }

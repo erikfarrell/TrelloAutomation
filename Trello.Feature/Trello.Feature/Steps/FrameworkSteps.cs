@@ -9,6 +9,7 @@ using TechTalk.SpecFlow;
 using Trello.Feature.Contexts;
 using WebAutomation.Logic.Trello;
 using WebAutomation.Logic.Trello.Board;
+using WebAutomation.Logic.Trello.Main;
 
 namespace Trello.Feature.Steps
 {

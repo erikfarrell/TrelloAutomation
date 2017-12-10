@@ -19,15 +19,16 @@ namespace WebAutomation.Logic.Trello.Board.TopBar.BoardsMenu
 
         public AddBoardModal GoToCreateNewBoard()
         {
-            Web.Driver.FindElement(By.XPath("//span[text()='Boards']")).Click();
-            BoardsDrawer().FindVisibleElement(Web.Driver, By.XPath($"//a[text()='Create new board…']"), Web.UniversalTimeout).Click();
+            Web.Driver.FindElement(BoardsMenuScreenReference.BoardsButton).Click();
+            BoardsDrawer().FindVisibleElement(Web.Driver, BoardsMenuScreenReference.CreateNewBoardLink, Web.UniversalTimeout).Click();
+            Web.Driver.WaitForVisibleElement(AddBoardScreenReference.AddBoardTitleTextbox, Web.UniversalTimeout);
 
             return new AddBoardModal(Web);
         }
 
         private IWebElement BoardsDrawer()
         {
-            return Web.Driver.FindElement(By.Id("boards-drawer"));
+            return Web.Driver.FindElement(BoardsMenuScreenReference.BoardsDrawer);
         }
     }
 }

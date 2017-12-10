@@ -12,10 +12,7 @@ namespace WebAutomation.Logic.Trello.Board.TopBar
 {
     public class TopBarElement : IWebAutomationElement
     {
-        public BoardsMenuElement BoardsMenu
-        {
-            get { return new BoardsMenuElement(Web); }
-        }
+        public BoardsMenuElement BoardsMenu => new BoardsMenuElement(Web);
 
         public TopBarElement(WebModel web) : base(web)
         {

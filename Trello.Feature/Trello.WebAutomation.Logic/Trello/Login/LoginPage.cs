@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using WebAutomation.Logic.Base;
 using WebAutomation.Logic.Trello.Board;
+using WebAutomation.Logic.Trello.Board.TopBar;
 using WebAutomation.Models;
 using static Common.Selenium.Logic.Extensions;
 
-namespace WebAutomation.Logic.Trello
+namespace WebAutomation.Logic.Trello.Login
 {
     public class LoginPage : IWebAutomationPage
     {
@@ -19,10 +20,10 @@ namespace WebAutomation.Logic.Trello
 
         public BoardPage LogIn(string username, string password)
         {
-            Web.Driver.FindElement(By.Id("user")).SendKeys(username);
-            Web.Driver.FindElement(By.Id("password")).SendKeys(password);
-            Web.Driver.FindElement(By.Id("login")).Click();
-            Web.Driver.WaitForVisibleElement(By.XPath("//a[@aria-label='Open Member Menu']"), Web.UniversalTimeout);
+            Web.Driver.FindElement(LoginScreenReference.UserTextbox).SendKeys(username);
+            Web.Driver.FindElement(LoginScreenReference.PasswordTextbox).SendKeys(password);
+            Web.Driver.FindElement(LoginScreenReference.LoginButton).Click();
+            Web.Driver.WaitForVisibleElement(TopBarScreenReference.MemberMenu, Web.UniversalTimeout);
 
             return new BoardPage(Web);
         }
