@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Trello.Feature.Contexts;
+using Xunit.Abstractions;
 
 namespace Trello.Feature.Steps
 {

@@ -1,4 +1,5 @@
-﻿using Common.Selenium.Logic.Enums;
+﻿using Common.Selenium.Models;
+using Common.Selenium.Models.Enums;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -14,12 +15,21 @@ namespace Common.Selenium.Logic
 {
     public static class Driver
     {
-        public static IWebDriver GetDriverByType(string webDriverType)
+        public static IWebDriver GetDriver(DriverSettingsModel model)
         {
-            return GetDriverByType((WebDriverType)Enum.Parse(typeof(WebDriverType), webDriverType));
+            IWebDriver driver = GetDriverByType(model.WebDriverType);
+
+            //HACK: Not a super friendly way of doing this.. lock this setting in development only for now
+            if (model.IsDisplayedOnSecondMonitor)
+                driver.Manage().Window.Position = new System.Drawing.Point(2000, 1);
+
+            if (model.IsMaximized)
+                driver.Manage().Window.Maximize();
+
+            return driver;
         }
 
-        public static IWebDriver GetDriverByType(WebDriverType webDriverType)
+        private static IWebDriver GetDriverByType(WebDriverType webDriverType)
         {
             switch (webDriverType)
             {

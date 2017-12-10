@@ -25,10 +25,38 @@ namespace Trello.Feature.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Firefox")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Chrome")]
         public string WebDriver {
             get {
                 return ((string)(this["WebDriver"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("survias@live.com")]
+        public string TrelloUsername {
+            get {
+                return ((string)(this["TrelloUsername"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("bkXCU+WNOvX65D7ETwkWyBLFr00/8FQS9vhlCGr6Pu8Q240YxuSWZXU07fQkDr6zjMNKebxLvlTXj/4YJ" +
+            "4h00sI/O+cHsUlmrNaByrn0UVFsJcL6hKc9oMZIqqhaOD/O")]
+        public string TrelloEncryptedPassword {
+            get {
+                return ((string)(this["TrelloEncryptedPassword"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsMaximized {
+            get {
+                return ((bool)(this["IsMaximized"]));
             }
         }
     }

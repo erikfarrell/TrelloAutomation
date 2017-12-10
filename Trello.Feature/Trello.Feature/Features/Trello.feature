@@ -3,10 +3,9 @@
 	As a developer
 	I want to use Trello as an automation example platform
 
-@mytag
+@INPROGRESS
 Scenario: Create a new board
-	Given I navigate to "https://trello.com"
-	And I log in as "survias@live.com"
+	Given I log in to the test Trello instance
 	And I open the Boards menu from top menu navigation
 	And I click "Create new board..." in the Boards menu
 	When I create a new board with the following values
@@ -18,8 +17,7 @@ Scenario: Create a new board
 	Then the board should appear
 
 Scenario: Permanently delete a board
-	Given I navigate to "https://trello.com"
-	And I log in as "survias@live.com"
+	Given I log in to the test Trello instance
 	And I open the Boards menu from top menu navigation
 	And I open the "Blue Board" board from the Boards menu
 	And I open the board side menu

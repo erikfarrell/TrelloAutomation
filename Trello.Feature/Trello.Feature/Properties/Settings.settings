@@ -3,7 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="WebDriver" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Firefox</Value>
+      <Value Profile="(Default)">Chrome</Value>
+    </Setting>
+    <Setting Name="TrelloUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">survias@live.com</Value>
+    </Setting>
+    <Setting Name="TrelloEncryptedPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">bkXCU+WNOvX65D7ETwkWyBLFr00/8FQS9vhlCGr6Pu8Q240YxuSWZXU07fQkDr6zjMNKebxLvlTXj/4YJ4h00sI/O+cHsUlmrNaByrn0UVFsJcL6hKc9oMZIqqhaOD/O</Value>
+    </Setting>
+    <Setting Name="IsMaximized" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trello.Feature", "Trello.Feature\Trello.Feature.csproj", "{582DE019-9842-4630-A707-767FC9C7CA38}"
 EndProject
@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logic", "Common.Logi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Selenium.Logic", "Common.Selenium.Logic\Common.Selenium.Logic.csproj", "{EE573291-65A5-4568-8778-E3B0FBCF45F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trello.WebAutomation.Logic", "Trello.WebAutomation.Logic\Trello.WebAutomation.Logic.csproj", "{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAutomation.Logic", "Trello.WebAutomation.Logic\WebAutomation.Logic.csproj", "{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trello.WebAutomation.Models", "Trello.WebAutomation.Models\Trello.WebAutomation.Models.csproj", "{9E059F26-30AA-491B-AEA8-6608CB68327A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAutomation.Models", "Trello.WebAutomation.Models\WebAutomation.Models.csproj", "{9E059F26-30AA-491B-AEA8-6608CB68327A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Selenium.Models", "Common.Selenium.Models\Common.Selenium.Models.csproj", "{75A8605D-927D-4F03-B2C1-1CF3D0DE731D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E059F26-30AA-491B-AEA8-6608CB68327A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A8605D-927D-4F03-B2C1-1CF3D0DE731D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A8605D-927D-4F03-B2C1-1CF3D0DE731D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A8605D-927D-4F03-B2C1-1CF3D0DE731D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A8605D-927D-4F03-B2C1-1CF3D0DE731D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

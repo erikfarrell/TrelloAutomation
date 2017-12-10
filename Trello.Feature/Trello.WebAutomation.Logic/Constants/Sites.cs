@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Selenium.Logic.Enums
+namespace WebAutomation.Logic.Constants
 {
-    public enum WebDriverType
+    public class Sites
     {
-        Chrome,
-        Explorer,
-        Firefox
+        public const string Trello = "https://trello.com";
     }
 }

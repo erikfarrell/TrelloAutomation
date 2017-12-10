@@ -77,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Keys.cs" />
     <Compile Include="Contexts\TrelloContext.cs" />
     <Compile Include="Models\SessionModel.cs" />
     <Compile Include="Models\SessionObjectModel.cs" />
@@ -114,9 +115,25 @@
     <Content Include="ProjectDescription.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Logic\Common.Logic.csproj">
+      <Project>{18483A35-25A8-4182-AFC6-74251F6B1B42}</Project>
+      <Name>Common.Logic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common.Selenium.Logic\Common.Selenium.Logic.csproj">
       <Project>{EE573291-65A5-4568-8778-E3B0FBCF45F7}</Project>
       <Name>Common.Selenium.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Selenium.Models\Common.Selenium.Models.csproj">
+      <Project>{75A8605D-927D-4F03-B2C1-1CF3D0DE731D}</Project>
+      <Name>Common.Selenium.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trello.WebAutomation.Logic\WebAutomation.Logic.csproj">
+      <Project>{CC7F54B5-5BD1-4456-93E5-E60B5C61EE74}</Project>
+      <Name>WebAutomation.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trello.WebAutomation.Models\WebAutomation.Models.csproj">
+      <Project>{9E059F26-30AA-491B-AEA8-6608CB68327A}</Project>
+      <Name>WebAutomation.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

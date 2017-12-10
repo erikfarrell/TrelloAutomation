@@ -1,5 +1,5 @@
-﻿using Common.Selenium.Logic;
-using Common.Selenium.Logic.Enums;
+﻿using Common.Logic.Helpers;
+using Common.Selenium.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Trello.Feature.Contexts;
+using WebAutomation.Logic.Trello;
 
 namespace Trello.Feature.Steps
 {
@@ -20,17 +21,12 @@ namespace Trello.Feature.Steps
             _context = context;
         }
 
-        [Given(@"I navigate to ""(.*)""")]
-        public void GivenINavigateTo(string p0)
+        [Given(@"I log in to the test Trello instance")]
+        public void GivenILogInToTheTestTrelloInstance()
         {
-            _context.WebDriver.Navigate().GoToUrl(p0);
-            ScenarioContext.Current.Pending();
-        }
+            Authentication authentication = new Authentication(_context.Web);
 
-        [Given(@"I log in as ""(.*)""")]
-        public void GivenILogInAs(string p0)
-        {
-            ScenarioContext.Current.Pending();
+            authentication.LogIn(Properties.Settings.Default.TrelloUsername, Crypto.Decrypt(Properties.Settings.Default.TrelloEncryptedPassword, Constants.Keys.Passphrase));
         }
 
         [When(@"I click ""(.*)"" in the confirmation box")]
