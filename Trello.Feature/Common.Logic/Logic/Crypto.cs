@@ -20,6 +20,12 @@ namespace Common.Logic.Helpers
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
 
+        /// <summary>
+        /// Provides an encrypted string
+        /// </summary>
+        /// <param name="plainText">The text you wish to encrypt</param>
+        /// <param name="passPhrase">An encryption key</param>
+        /// <returns></returns>
         public static string Encrypt(string plainText, string passPhrase)
         {
             // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
@@ -57,6 +63,12 @@ namespace Common.Logic.Helpers
             }
         }
 
+        /// <summary>
+        /// Decrypts an encrypted string
+        /// </summary>
+        /// <param name="cipherText">The encrypted string</param>
+        /// <param name="passPhrase">The key used to encrypt the string</param>
+        /// <returns></returns>
         public static string Decrypt(string cipherText, string passPhrase)
         {
             // Get the complete stream of bytes that represent:

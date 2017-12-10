@@ -15,15 +15,20 @@ namespace Common.Selenium.Logic
 {
     public static class Driver
     {
-        public static IWebDriver GetDriver(DriverSettingsModel model)
+        /// <summary>
+        /// Sets up a Selenium web driver for automation
+        /// </summary>
+        /// <param name="settingsModel">Settings to adjust the web driver prior to return</param>
+        /// <returns></returns>
+        public static IWebDriver GetDriver(DriverSettingsModel settingsModel)
         {
-            IWebDriver driver = GetDriverByType(model.WebDriverType);
+            IWebDriver driver = GetDriverByType(settingsModel.WebDriverType);
 
             //HACK: Not a super friendly way of doing this.. lock this setting in development only for now
-            if (model.IsDisplayedOnSecondMonitor)
+            if (settingsModel.IsDisplayedOnSecondMonitor)
                 driver.Manage().Window.Position = new System.Drawing.Point(2000, 1);
 
-            if (model.IsMaximized)
+            if (settingsModel.IsMaximized)
                 driver.Manage().Window.Maximize();
 
             return driver;
