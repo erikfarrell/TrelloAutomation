@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit.Abstractions;
 
 namespace Trello.Feature.Models
 {
     public class SessionModel
     {
+        public ITestOutputHelper Output { get; private set; }
         private List<SessionObjectModel> SessionObjects { get; set; }
 
-        public SessionModel()
+        public SessionModel(ITestOutputHelper output)
         {
+            Output = output;
             SessionObjects = new List<SessionObjectModel>();
         }
 

@@ -26,7 +26,10 @@ namespace Trello.Feature.Steps
         {
             Authentication authentication = new Authentication(_context.Web);
 
-            authentication.LogIn(Properties.Settings.Default.TrelloUsername, Crypto.Decrypt(Properties.Settings.Default.TrelloEncryptedPassword, Constants.Keys.Passphrase));
+            authentication.LogIn(
+                Properties.Settings.Default.TrelloUsername, 
+                Crypto.Decrypt(Properties.Settings.Default.TrelloEncryptedPassword, 
+                Constants.Keys.Passphrase));
         }
 
         [When(@"I click ""(.*)"" in the confirmation box")]

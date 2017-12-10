@@ -62,6 +62,10 @@
     <Content Include="ProjectDescription.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Selenium.Logic\Common.Selenium.Logic.csproj">
+      <Project>{ee573291-65a5-4568-8778-e3b0fbcf45f7}</Project>
+      <Name>Common.Selenium.Logic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Trello.WebAutomation.Models\WebAutomation.Models.csproj">
       <Project>{9E059F26-30AA-491B-AEA8-6608CB68327A}</Project>
       <Name>WebAutomation.Models</Name>

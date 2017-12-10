@@ -59,5 +59,14 @@ namespace Trello.Feature.Properties {
                 return ((bool)(this["IsMaximized"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("00:00:10")]
+        public global::System.TimeSpan UniversalTimeout {
+            get {
+                return ((global::System.TimeSpan)(this["UniversalTimeout"]));
+            }
+        }
     }
 }

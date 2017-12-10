@@ -23,12 +23,13 @@ namespace Trello.Feature.Contexts
 
         public TrelloContext(ITestOutputHelper output)
         {
-            Session = new SessionModel();
-            Web = new WebModel();
-
-            output.WriteLine("test" + IsDisplayedOnSecondMonitor().ToString());
-
-            Web.Driver = Driver.GetDriver(new DriverSettingsModel(Properties.Settings.Default.WebDriver, Properties.Settings.Default.IsMaximized, IsDisplayedOnSecondMonitor()));
+            IWebDriver driver = 
+                Driver.GetDriver(new DriverSettingsModel(Properties.Settings.Default.WebDriver, 
+                Properties.Settings.Default.IsMaximized, 
+                IsDisplayedOnSecondMonitor()));
+            
+            Session = new SessionModel(output);
+            Web = new WebModel(driver, Properties.Settings.Default.UniversalTimeout);
         }
 
         private bool IsDisplayedOnSecondMonitor()
