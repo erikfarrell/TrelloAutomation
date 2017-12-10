@@ -32,6 +32,7 @@ namespace Trello.Feature.Contexts
             Web = new WebModel(driver, Properties.Settings.Default.UniversalTimeout);
         }
 
+        //HACK: Locked to development only for now
         private bool IsDisplayedOnSecondMonitor()
         {
             if (System.Diagnostics.Debugger.IsAttached)
