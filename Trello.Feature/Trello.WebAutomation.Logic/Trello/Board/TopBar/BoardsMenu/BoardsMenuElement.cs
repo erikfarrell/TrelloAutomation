@@ -19,23 +19,31 @@ namespace WebAutomation.Logic.Trello.Board.TopBar.BoardsMenu
 
         public AddBoardModal GoToCreateNewBoard()
         {
-            Web.Driver.FindElement(BoardsMenuScreenReference.BoardsButton).Click();
             BoardsDrawer().FindVisibleElement(Web.Driver, BoardsMenuScreenReference.CreateNewBoardLink, Web.UniversalTimeout).Click();
             Web.Driver.WaitForVisibleElement(AddBoardScreenReference.AddBoardTitleTextbox, Web.UniversalTimeout);
 
             return new AddBoardModal(Web);
         }
-
+        
         public List<IWebElement> GetBoardsButtonsFromMenu()
         {
-            Web.Driver.FindClickableElement(BoardsMenuScreenReference.BoardsButton, Web.UniversalTimeout).Click();
-            return BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtons).ToList();
+            return BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtons).Where(w => w.Displayed).ToList();
         }
 
         public List<string> GetBoardButtonNamesFromMenu()
         {
-            Web.Driver.FindClickableElement(BoardsMenuScreenReference.BoardsButton, Web.UniversalTimeout).Click();
-            return BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtonNames).Select(e => e.GetAttribute("title")).ToList();
+            var test = BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtonNames);
+            var test2 = BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtonNames).Where(w => w.Displayed);
+
+            return BoardsDrawer().FindElements(BoardsMenuScreenReference.BoardButtonNames).Where(w => w.Displayed).Select(e => e.GetAttribute("title")).ToList();
+        }
+
+        public BoardPage CloseBoardsDrawer()
+        {
+            Web.Driver.FindClickableElement(TopBarScreenReference.BoardsButton, Web.UniversalTimeout).Click();
+            Web.Driver.WaitForInvisibleElement(BoardsMenuScreenReference.BoardsDrawer, Web.UniversalTimeout);
+
+            return new BoardPage(Web);
         }
 
         private IWebElement BoardsDrawer()

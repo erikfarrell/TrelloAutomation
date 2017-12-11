@@ -107,38 +107,6 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Permanently delete a board")]
-        [Xunit.TraitAttribute("FeatureTitle", "Trello")]
-        [Xunit.TraitAttribute("Description", "Permanently delete a board")]
-        public virtual void PermanentlyDeleteABoard()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Permanently delete a board", ((string[])(null)));
-#line 17
-this.ScenarioSetup(scenarioInfo);
-#line 18
- testRunner.Given("I log in to the test Trello instance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
- testRunner.And("I open the Boards menu from top menu navigation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
- testRunner.And("I open the \"Blue Board\" board from the Boards menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
- testRunner.And("I open the board side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
- testRunner.And("I click on \"More\" in the board side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
- testRunner.When("I click on \"Close Board...\" in the board side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
- testRunner.And("I click \"Close\" in the confirmation box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.And("I click \"Permanently Delete Board...\" in the main panel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
- testRunner.And("I click \"Delete\" in the confirmation box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
- testRunner.Then("the board should not exist in the Boards menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

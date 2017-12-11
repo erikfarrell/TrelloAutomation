@@ -58,6 +58,9 @@
     <Compile Include="Constants\Sites.cs" />
     <Compile Include="Trello\AddBoard\AddBoardModal.cs" />
     <Compile Include="Trello\AddBoard\AddBoardScreenReference.cs" />
+    <Compile Include="Trello\Board\BoardMenu\BoardMenuElement.cs" />
+    <Compile Include="Trello\Board\BoardMenu\BoardMenuScreenReference.cs" />
+    <Compile Include="Trello\Board\BoardPageScreenReference.cs" />
     <Compile Include="Trello\Board\TopBar\BoardsMenu\BoardsMenuScreenReference.cs" />
     <Compile Include="Trello\Board\TopBar\TopBarScreenReference.cs" />
     <Compile Include="Trello\Login\LoginPage.cs" />
