@@ -75,11 +75,11 @@ namespace Trello.Feature.Features
         [Xunit.FactAttribute(DisplayName="Create a new board")]
         [Xunit.TraitAttribute("FeatureTitle", "Trello")]
         [Xunit.TraitAttribute("Description", "Create a new board")]
-        [Xunit.TraitAttribute("Category", "INPROGRESS")]
+        [Xunit.TraitAttribute("Category", "Complete")]
         public virtual void CreateANewBoard()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a new board", new string[] {
-                        "INPROGRESS"});
+                        "Complete"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

@@ -3,7 +3,7 @@
 	As a developer
 	I want to use Trello as an automation example platform
 
-@INPROGRESS
+@Complete
 Scenario: Create a new board
 	Given I log in to the test Trello instance
 	And I click Create New Board... from Top Menu => Boards
