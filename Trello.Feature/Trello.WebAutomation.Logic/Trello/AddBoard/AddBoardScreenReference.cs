@@ -14,6 +14,7 @@ namespace WebAutomation.Logic.Trello.AddBoard
         public static By SecurityOption(string option) => By.XPath($"//ul[contains(@class, 'vis-chooser')]//span[text()='{option}']/parent::a");
         public static By BoardColorButton(string color) => By.XPath($"//button[@title='{color.ToLower()}']");
         public static By CreateBoardButton => By.XPath("//span[text()='Create Board']/parent::button");
-        public static By WindowOverlay => By.XPath("//div[contains(@class, 'window-overlay')]");
+        public static By Window => By.XPath("//div[contains(@class, 'window-overlay')]/div[contains(@class, 'window')]");
+        public static By PopOver => By.XPath("//div[contains(@class, 'pop-over')]");
     }
 }
